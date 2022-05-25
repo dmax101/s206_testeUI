@@ -1,0 +1,23 @@
+{
+  "name": "s206_testeui",
+  "version": "1.0.0",
+  "description": "Tarefa usando Cypress para testes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmax101/s206_testeUI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmax101/s206_testeUI/issues"
+  },
+  "homepage": "https://github.com/dmax101/s206_testeUI#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}
