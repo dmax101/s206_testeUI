@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-25T02:08:16.482Z",
+    "end": "2022-05-25T02:08:44.937Z",
+    "duration": 28455,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e984c1dd-9961-4937-b32c-f7c15c9d5378",
+      "title": "",
+      "fullFile": "cypress/integration/0-inatel/autoPractice.spec.js",
+      "file": "cypress/integration/0-inatel/autoPractice.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa302ac6-a26a-47ef-9249-214f4943f7e8",
+          "title": "Automation Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve poder acessar a página e realizar uma busca",
+              "fullTitle": "Automation Practice deve poder acessar a página e realizar uma busca",
+              "timedOut": null,
+              "duration": 7258,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://automationpractice.com/\");\ncy.get(\"#search_query_top\").type(\"Dress\");\ncy.get(\"#search_query_top\").type(\"{enter}\");",
+              "err": {},
+              "uuid": "66b51257-a038-4e2e-8cc4-8540de7bbaf5",
+              "parentUUID": "aa302ac6-a26a-47ef-9249-214f4943f7e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve não poder realizar o sign in devido a senha e usuário incorreto",
+              "fullTitle": "Automation Practice deve não poder realizar o sign in devido a senha e usuário incorreto",
+              "timedOut": null,
+              "duration": 5870,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://automationpractice.com/index.php?controller=authentication&back=my-account\");\ncy.get(\"#email\").type(\"test@test.com\");\ncy.get(\"#passwd\").type(\"test123\");\ncy.get(\"#SubmitLogin\").click();\ncy.get(\"#center_column > :nth-child(2) > p\").should(\"contain\", \"There is 1 error\");",
+              "err": {},
+              "uuid": "337b41b7-5bd3-4deb-843a-208a3d2b977f",
+              "parentUUID": "aa302ac6-a26a-47ef-9249-214f4943f7e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve poder cadastrar um novo usuário",
+              "fullTitle": "Automation Practice deve poder cadastrar um novo usuário",
+              "timedOut": null,
+              "duration": 11230,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://automationpractice.com/index.php?controller=authentication&back=my-account\");\nlet email = generateRandomEmail();\nlet password = \"test123\";\ncy.fixture(\"user.json\").then(user => {\n  let userTest = {\n    name: user.name,\n    lastname: user.lastname\n  };\n  array.push({\n    email: email,\n    password: password\n  });\n  cy.get(\"#email_create\").type(email);\n  cy.get(\"#SubmitCreate\").click();\n  cy.get(\"#id_gender1\").click();\n  cy.get(\"#customer_firstname\").type(userTest.name);\n  cy.get(\"#customer_lastname\").type(userTest.lastname);\n  cy.get(\"#passwd\").type(password);\n  cy.get(\"#days\").select(\"1\");\n  cy.get(\"#months\").select(\"January\");\n  cy.get(\"#years\").select(\"1990\");\n  cy.get(\"#company\").type(\"Teste\");\n  cy.get(\"#address1\").type(\"Teste\");\n  cy.get(\"#address2\").type(\"Teste\");\n  cy.get(\"#city\").type(\"Teste\");\n  cy.get(\"#id_state\").select(\"Alaska\");\n  cy.get(\"#postcode\").type(\"12345\");\n  cy.get(\"#other\").type(\"Teste\");\n  cy.get(\"#phone\").type(\"123456789\");\n  cy.get(\"#phone_mobile\").type(\"123456789\");\n  cy.get(\"#alias\").type(\"Teste\");\n  cy.get(\"#submitAccount\").click();\n  cy.get(\".info-account\").should(\"contain\", \"Welcome to your account. Here you can manage all of your personal information and orders.\");\n});",
+              "err": {},
+              "uuid": "83765015-c8d3-4176-93d8-18a29686be5d",
+              "parentUUID": "aa302ac6-a26a-47ef-9249-214f4943f7e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66b51257-a038-4e2e-8cc4-8540de7bbaf5",
+            "337b41b7-5bd3-4deb-843a-208a3d2b977f",
+            "83765015-c8d3-4176-93d8-18a29686be5d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24358,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

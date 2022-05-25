@@ -8,21 +8,23 @@
 
 Este projeto tem como objetivo testar a interface do usuário.
 
-## Instalação
+## 🌐 Instalação
 
-🌐 Inicie clonando o projeto no seu computador.
+Inicie clonando o projeto no seu computador.
 
 ```bash
 git clone https://github.com/dmax101/s206_testeUI.git
 ```
 
-📚 Logo após, execute o comando para instalar as dependências:
+Logo após, execute o comando para instalar as dependências:
 
 ```bash
 npm install
 ```
 
-🏎️ Logo após, execute o comando para iniciar o gerenciador de testes do cypress:
+## 🏎️ Testes
+
+Logo após, execute o comando para iniciar o gerenciador de testes do cypress:
 
 ```bash
 ./node_modules/.bin/cypress open
@@ -31,3 +33,15 @@ npm install
 Logo irá abrir uma janela onde será possível escolher o teste `autoPractice.spec.js` que está na pasta `0-inatel`. Clique no arquivo e outra janela abrirá com o teste que executará automaticamente.
 
 🎌 Pronto! Agora você pode testar a interface do usuário.
+
+## 📒 Relatórios
+
+Para gerar um relatório e de quebra o vídeo do teste rodando no seu computador, execute o comando abaixo:
+
+```bash
+.\node_modules\.bin\cypress run --spec .\cypress\integration\0-inatel\autoPractice.spec.js --browser chrome --reporter mochawesome
+```
+
+**_Vídeo_**: Assista o relatório [aqui](./cypress/videos/0-inatel/autoPractice.mp4).
+
+**_Relatório_**: Acesse o relatório [aqui](./mochawesome-report/mochawesome.html).
