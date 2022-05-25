@@ -42,6 +42,6 @@ Para gerar um relatório e de quebra o vídeo do teste rodando no seu computador
 .\node_modules\.bin\cypress run --spec .\cypress\integration\0-inatel\autoPractice.spec.js --browser chrome --reporter mochawesome
 ```
 
-**_Vídeo_**: Assista o relatório [aqui](./cypress/videos/0-inatel/autoPractice.mp4).
+**_Vídeo_**: Assista o relatório [aqui](./cypress/videos/0-inatel/autoPractice.spec.js.mp4).
 
 **_Relatório_**: Acesse o relatório [aqui](./mochawesome-report/mochawesome.html).
